@@ -3,17 +3,11 @@ const todoInput= document.querySelector('.todo-input')
 const todoButton= document.querySelector('.todo-button')
 const todoList= document.querySelector('.todo-list')
 const filterOption = document.querySelector('.filter-todo')
-
-
-
 //Event Listeners
 document.addEventListener('DOMContentLoaded', getTodos);
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', filterTodo);
-
-
-
 //Functions
 function addTodo(event){
     //prevent form from submitting
@@ -83,8 +77,7 @@ function filterTodo(e) {
                     }else{
                         todo.style.display = "none";
                     }
-                    break;
-                
+                    break;         
         }
     })
 }
@@ -139,7 +132,7 @@ function removeLocalTodos(todo){
     }
     // console.log(todo.children[0].innerText);
     // console.log(todos.indexOf('potato'));
-    const todoIndex = todo.children[0].innerText
+    const todoIndex = todo.children[0].innerText;
     todos.splice(todos.indexOf(todoIndex),1);
     localStorage.setItem("todos", JSON.stringify(todos));
 }
