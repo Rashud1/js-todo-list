@@ -199,7 +199,7 @@ form button:hover {
   background: rgb(73, 204, 73);
 }
 .fa-trash,
-.fa-check {
+.fa-square-check {
   pointer-events: none;
 }
 .completed {
